@@ -20,7 +20,7 @@ def r2_score(y_true,y_pred):
     v = sum(square(y_true-mean(y_true)))
     return (1-u/(v+epsilon()))
 
-model = load_model('surface_model.h5',custom_objects={"r2_score": r2_score})
+model = load_model('mysurface_model.h5',custom_objects={"r2_score": r2_score})
 
 if img:
 	img = Image.open(img)
